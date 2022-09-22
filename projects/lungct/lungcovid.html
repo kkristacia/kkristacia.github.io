@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>lungcovid</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper" class="divided">
+
+			<!-- Landing Page -->
+			<section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
+				<div class="content">
+					<h1>Semantic Segmentation of COVID-19 Infected Lung CT Images with DeepLabV3+</h1>
+					<h3>Author: Kristacia Kang</h3>
+					<p class="major">
+						Radiological presentations of COVID-19 lung infection include ground-glass opacity (GGO), consolidations, 
+						and pleural effusions, visible from the lung computed tomography (CT) image. A radiologist maybe required 
+						not only to identify the types of infection presentations but also to estimate the severity of damage to 
+						the lungs. However, this is a manual time-consuming process which can overburned radiologists especially 
+						during high-load periods. An artificial intelligence (AI)-based model that can automatically and rapidly 
+						segments the different presentations of lung infections can direct radiologists to the relevant regions,
+						reduce human error and improve patient triage, easing the burden on the overall health systems. 
+					</p>
+					<!-- <ul class="actions stacked">
+						<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+					</ul> -->
+				</div>
+				<div class="image">
+					<img src="images/emir_g.jpg" alt="" class="center"/>
+				</div>
+			</section>
+
+			<!-- Highlight 1 -->
+			<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<div class="content">
+					<h2>Objective</h2>
+					<p>
+						Develop a Deep Convolutional Neural Network (DCNN) model which can perform semantic segmentation on lung CT 
+						images on three presentation categories: GGO, consolidation, and pleural effusion.
+					</p>
+					<!-- <ul class="actions stacked">
+						<li><a href="#" class="button">Learn More</a></li>
+					</ul> -->
+				</div>
+				<div class="image">
+					<img src="images/sampledata.jpg" alt="" />
+				</div>
+			</section>
+
+			<!-- Highlight 2 -->
+			<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+				<div class="content">
+					<h2>Results</h2>
+					<p>
+						Predictions made by DeepLabV3+ based architectures with ResNet18 and MobileNetV2 backbones.
+					</p>
+					<ul class="actions stacked">
+						<li><a href="#Methodology" class="button">Methodology</a></li>
+					</ul>
+				</div>
+				<div class="image">
+					<img src="images/sampletest.jpg" alt="" />
+				</div>
+				
+			</section>
+
+			<!-- Gallery Section -->
+			<section class="wrapper style1 align-center">
+				<div class="inner">
+					<h2>More Results</h2>
+					<p>
+						Below are the results of other images being reconstructed. The preview shows the original images, click on them to see the rectified ones.
+						Offsets information are shown in (red x offset, red y offset, green x offset, green y offset) format. The blue images were used as anchors.
+					</p>
+				</div>
+
+				<!-- Gallery -->
+					<div class="gallery style2 medium lightbox onscroll-fade-in">
+						<article>
+							<a href="images/harvesters.jpg" class="image">
+								<img src="images/harvesters_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Harvesters</h3>
+								<p>Offsets: (14, 124, 17, 61)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/emir.jpg" class="image">
+								<img src="images/emir_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Emir</h3>
+								<p>Offsets: (44, 104, 24, 49)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/icon.jpg" class="image">
+								<img src="images/icon_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Icon</h3>
+								<p>Offsets: (23, 90, 17, 41)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/lady.jpg" class="image">
+								<img src="images/lady_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Lady</h3>
+								<p>Offsets: (-9, 120, -4, 58)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/self_portrait.jpg" class="image">
+								<img src="images/self_portrait_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Self Portrait</h3>
+								<p>Offsets: (36, 176, 29, 79)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/three_generations.jpg" class="image">
+								<img src="images/three_generations_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Three Generations</h3>
+								<p>Offsets: (10, 112, 13, 55)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/train.jpg" class="image">
+								<img src="images/train_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Train</h3>
+								<p>Offsets: (31, 89, 5, 49)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/turkmen.jpg" class="image">
+								<img src="images/turkmen_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Turkmen</h3>
+								<p>Offsets: (27, 115, 20, 57)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/village.jpg" class="image">
+								<img src="images/village_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Village</h3>
+								<p>Offsets: (23, 138, 12, 65)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/uniform.jpg" class="image">
+								<img src="images/uniform_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Uniform</h3>
+								<p>Offsets: (38, 84, 27, 34)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/monastery.jpg" class="image">
+								<img src="images/monastery_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Monastery</h3>
+								<p>Offsets: (6, 87, 10, 29)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+						<article>
+							<a href="images/milan.jpg" class="image">
+								<img src="images/milan_org.jpg" alt="" />
+							</a>
+							<div class="caption">
+								<h3>Milan</h3>
+								<p>Offsets: (24, 107, 13, 57)</p>
+								<ul class="actions fixed">
+									<li><span class="button small">Details</span></li>
+								</ul>
+							</div>
+						</article>
+					</div>
+
+			</section>
+
+			<!-- Additional Elements -->
+			<section class="wrapper style1 align-center">
+				
+				<div class="inner">
+					<h2 id="Methodology">Methodology</h2>
+					<p>
+					The model was developed using transfer learning based on the DEEPLABV3+ architecture.
+					</p>
+					<span class="image"><img src="images/cathedral.jpg" alt="" /></span>
+
+					<p>
+					The method above works fine for small images, but for high-resolution images, it is prohibitively slow. The solution is to create an image pyramid, whereby the large image is blurred and downsampled multiple times. The image pyramid is then used for a coarse-to-fine search, whereby the deepest image in the pyramid (smallest and most blurry) is used to get a rough estimate for the alignment offset before searching on the larger images.
+					The figure below shows an example of an image pyramid.
+					</p>
+					<span class="image fit"><img src="images/emir_pyramid.png" alt="" /></span>
+					
+					<h2>Bells & Whistles</h2>
+
+					<div class="index align-left">
+
+						<!-- Text -->
+						<section>
+							<header>
+								<h3>PyTorch Implementation</h3>
+							</header>
+							<div class="content">
+
+								<p>
+								The algorithm was implemented in PyTorch instead of Numpy. This is purely to get me familiar with PyTorch, which will be used extensively in future assignments
+								</p>
+
+							</div>
+						</section>
+
+						<section>
+							<header>
+								<h3>Border Trimming</h3>
+							</header>
+							<div class="content">
+
+								<p>
+								A border detection and trimming algorithm was implemented. The raw images contained either black or white borders, which can disrupt the alignment algorithm which relies on finding image similarity. Therefore, before processing the borders are detected and trimmed away. To find the borders, average pixels values along the rows and columns are calculated, and the borders are selected based on when a certain amount of consecutive pixel values are not within specified boundaries that represent complete black or white borders. See the figure below for the pre-processing trim.
+								</p>
+								<span class="image fit"><img src="images/emir_pretrim.png" alt="" /></span>
+
+								<p>
+								Additionally, a post-processing trim is added to eliminate any remaining black or white borders and the pixels that have been offset during alignment. Otherwise, it will create color artifacts around the borders. See the figure below for the post-processing trim.
+								</p>			
+								<span class="image fit"><img src="images/emir_posttrim.png" alt="" /></span>
+
+							</div>
+						</section>
+
+			<!-- Footer -->
+			<footer class="wrapper style1 align-center">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/kangkelvin/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:kelvin_kang@outlook.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<p>&copy; Kelvin Kang. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
